@@ -1,0 +1,44 @@
+﻿<Window x:Class="myFirstMovie.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:myFirstMovie"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
+            <Setter Property="FontSize" Value="16"></Setter>
+            <Setter Property="Foreground" Value="Blue"></Setter>
+            <Setter Property="Margin" Value="10,2"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+        </Style>
+        <Style TargetType="ListBox">
+            <Setter Property="Background" Value="AntiqueWhite"></Setter>
+            <Setter Property="Margin" Value="10"></Setter>
+            <Setter Property="Foreground" Value="CornflowerBlue"></Setter>
+            <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
+        </Style>
+    </Window.Resources>
+    <Grid Background="Coral">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="6"></ColumnDefinition>
+            <ColumnDefinition Width="1.5*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock>Screenings</TextBlock>
+        <TextBlock Grid.Column="2">Cast in Movie</TextBlock>
+        <GridSplitter Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch"></GridSplitter>
+        <ListBox Name="lbxMovies" Grid.Row="1" SelectionChanged="lbxMovies_SelectionChanged"></ListBox>
+        <ListBox Name="lbxCast" Grid.Column="2" Grid.Row="1"></ListBox>
+        <TextBlock Name="tbkStats" Grid.ColumnSpan="3" Grid.Row="2" HorizontalAlignment="Left">Sample Text</TextBlock>
+    </Grid>
+</Window>
