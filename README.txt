@@ -24,3 +24,7 @@ Topics covered:
 **21/11/2015**
 
 * I updated this to use ObservableCollection<> instead of ArrayList
+
+**24/11/2015**
+
+* Updated to use 'PRIVATE STATIC' data member with public property to keep count of Movies and Actors in Movies

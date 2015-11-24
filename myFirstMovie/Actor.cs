@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace myFirstMovie
 {
-    class Actor
+    public class Actor
     {
+        private static int _actorCounter;
+        public static int ActorCounter { get { return _actorCounter; } set { _actorCounter = value; } }
+
         private string _name;
         public string Name { get { return _name; } set { _name = value; } }
 
@@ -19,6 +22,7 @@ namespace myFirstMovie
 
         public Actor(string nme, string dte="1968/10/7")
         {
+            ActorCounter ++;
             Name = nme;
             DateTime.TryParse(dte, out _dob);
         }

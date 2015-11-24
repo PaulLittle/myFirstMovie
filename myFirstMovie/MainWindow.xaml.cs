@@ -23,9 +23,6 @@ namespace myFirstMovie
     {
         ObservableCollection<Movie> screenings = new ObservableCollection<Movie>();
 
-        public static int movieCounter;
-        public static int actorCounter;
-
         public MainWindow()
         {
             InitializeComponent();           
@@ -65,10 +62,10 @@ namespace myFirstMovie
 
             foreach (Movie mov in screenings)
             {
-                movieCounter++;
-                actorCounter += mov.Cast.Count;
+                //movieCounter++;
+                
             }
-            tbkStats.Text = String.Format("{0} Movies with {1} Actors", movieCounter, actorCounter);
+            tbkStats.Text = String.Format("{0} Movies with {1} Actors", Movie.MovieCounter, Actor.ActorCounter);
 
         }
 
